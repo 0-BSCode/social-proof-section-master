@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    font-size: 62.5%;
+    font-family: "Spartan", sans-serif;
+    --darkMagenta: hsl(300, 43%, 22%);
+    --softPink: hsl(333, 80%, 67%);
+    --darkGrayMagenta: hsl(303, 10%, 53%);
+    --lightGrayMagenta: hsl(300, 24%, 96%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------- BODY & CARD ----------*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    background-image: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg"),
+                      url("./images/bg-pattern-top-mobile.svg"), url("./images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom, left top, right bottom;
+    background-size: 40%, 80%, 0%, 0%;
+}
+
+div.content-wrapper {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 11rem;
+    margin-bottom: 5rem;
+}
+
+div.content-wrapper div.content-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/*---------- FIRST ROW ----------*/
+
+div.first-row div.intro-text {
+    width: 40%;
+}
+
+div.first-row div.review {
+    width: 50%;
+    margin-left: 10%;
+}
+
+div.first-row div.intro-text h1 {
+    color: var(--darkMagenta);
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+div.first-row div.intro-text p {
+    color: var(--darkGrayMagenta);
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+}
+
+div.first-row div.review div.review-entry-wrapper {
+    background: var(--lightGrayMagenta);
+    border-radius: 0.7rem;
+    height: 4rem;
+    margin-bottom: 1.5rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+div.first-row div.review div.second-entry {
+    margin-left: 5%;
+}
+
+div.first-row div.review div.third-entry {
+    margin-left: 10%;
+}
+
+div.first-row div.review div.review-entry-wrapper ul.star-wrapper {
+    margin-left: 8%;
+}
+
+div.first-row div.review div.review-entry-wrapper ul.star-wrapper li {
+    display: inline-block;
+}
+
+div.first-row div.review div.review-entry-wrapper p {
+    font-weight: 700;
+    color: var(--darkMagenta);
+    padding-left: 8%;
+}
+
+
+/*---------- SECOND ROW ----------*/
+
+div.second-row {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.second-row div.testimonial {
+    background: var(--darkMagenta);
+    width: 32%;
+    height: 17rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div.second-row div.second-testimonial {
+    margin-top: 2.5%;
+}
+
+div.second-row div.third-testimonial {
+    margin-top: 5%;
+}
+
+div.second-row div.testimonial div.testimonial-wrapper {
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header {
+    display: flex;
+    align-items: center;
+}
+
+div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header img {
+    border-radius: 50%;
+    width: 3rem;
+}
+
+div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text {
+    margin-left: 1.7rem;
+}
+
+div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text p.buyer-name {
+    color: white;
+    font-weight: 700;
+}
+
+div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text p.buyer-description {
+    margin-top: 0.3rem;
+    color: var(--darkGrayMagenta);
+    font-weight: 500;
+}
+
+div.second-row div.testimonial div.testimonial-wrapper div.testimonial-body p {
+    color: var(--lightGrayMagenta);
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+/*---------- MEDIA QUERIES ----------*/
+
+@media only screen and (min-width: 1440px) {
+    :root {
+        font-size: 14px;
+    }
+
+    /*----- BODY & CARD -----*/
+
+    body {
+        background-size: 40%, 60%, 0%, 0%;
+    }
+}
+
+@media only screen and (min-width: 1124px) and (max-width: 1439px) {
+    :root {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+    :root {
+        font-size: 9px;
+    }
+
+    /*----- BODY & CARD -----*/
+    
+    body {
+        background-size: 60%, 80%, 0%, 0%;
+    }
+
+    div.content-wrapper {
+        width: 85%;
+    }
+
+    /*----- FIRST ROW -----*/
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper {
+        margin-left: 6%;
+    }
+
+    div.first-row div.review div.review-entry-wrapper p {
+        padding-left: 6%;
+    }
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper li img {
+        width: 1.3rem;
+    }
+
+    /*----- SECOND ROW -----*/
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-body p {
+        font-size: 0.85rem;
+        line-height: 1.55rem;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    :root {
+        font-size: 10px;
+    }
+
+    /*---- BODY & CARD  -----*/
+
+    body {
+        background-size: 0%, 0%, 100%, 20%;
+    }
+
+    div.content-wrapper {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+        width: 80%;
+    }
+
+    /*---- FIRST ROW -----*/
+
+    div.content-wrapper div.content-row {
+        flex-direction: column;
+    }
+
+    div.first-row div.intro-text, div.first-row div.review, div.first-row div.review div.review-entry-wrapper {
+        width: 100%;
+    }
+
+    div.first-row div.review, div.first-row div.review div.second-entry, div.first-row div.review div.third-entry {
+        margin-left: 0;
+    }
+
+    div.first-row div.intro-text h1, div.first-row div.intro-text p {
+        text-align: center;
+    }
+
+    div.first-row div.intro-text h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+
+    div.first-row div.intro-text p {
+        font-size: 1.7rem;
+        line-height: 2.8rem;
+        margin-top: 2.3rem;
+        margin-bottom: 5rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper {
+        margin-left: 0;
+    }
+
+    div.first-row div.review div.review-entry-wrapper p {
+        padding-left: 0;
+        font-size: 1.5rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper li img {
+        width: 3rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper li img {
+        width: 2rem;
+        margin-left: 0.5rem;
+    }
+
+    /*----- SECOND ROW -----*/
+
+    div.second-row div.testimonial {
+        width: 100%;
+        height: 30rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    div.second-row div.second-testimonial, div.second-row div.third-testimonial {
+        margin-top: 0;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text {
+        margin-left: 3rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header img {
+        width: 5rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text p.buyer-name {
+        font-size: 1.5rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text p.buyer-description {
+        font-size: 1.4rem;
+        margin-top: 0.6rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-body p {
+        font-size: 1.55rem;
+        line-height: 2.6rem;
+    }
+}
+
+@media only screen and (min-width: 368px) and (max-width: 479px) {
+    :root {
+        font-size: 7px;
+    }
+
+    /*---- BODY & CARD  -----*/
+
+    body {
+        background-size: 0%, 0%, 100%, 20%;
+    }
+
+    div.content-wrapper {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+        width: 90%;
+    }
+
+    /*---- FIRST ROW -----*/
+
+    div.content-wrapper div.content-row {
+        flex-direction: column;
+    }
+
+    div.first-row div.intro-text, div.first-row div.review, div.first-row div.review div.review-entry-wrapper {
+        width: 100%;
+    }
+
+    div.first-row div.review, div.first-row div.review div.second-entry, div.first-row div.review div.third-entry {
+        margin-left: 0;
+    }
+
+    div.first-row div.intro-text h1, div.first-row div.intro-text p {
+        text-align: center;
+    }
+
+    div.first-row div.intro-text h1 {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+    }
+
+    div.first-row div.intro-text p {
+        font-size: 2rem;
+        line-height: 2.8rem;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 12rem;
+        margin-bottom: 2.5rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper {
+        margin-left: 0;
+    }
+
+    div.first-row div.review div.review-entry-wrapper p {
+        padding-left: 0;
+        font-size: 1.7rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper li img {
+        width: 3rem;
+    }
+
+    div.first-row div.review div.review-entry-wrapper ul.star-wrapper li img {
+        width: 2.5rem;
+        margin-left: 0.6rem;
+    }
+
+    /*----- SECOND ROW -----*/
+
+    div.second-row div.testimonial {
+        width: 100%;
+        height: 32rem;
+        border-radius: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    div.second-row div.second-testimonial, div.second-row div.third-testimonial {
+        margin-top: 0;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text {
+        margin-left: 3rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header img {
+        width: 5rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text p.buyer-name {
+        font-size: 1.6rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-header div.header-text p.buyer-description {
+        font-size: 1.5rem;
+        margin-top: 0.7rem;
+    }
+
+    div.second-row div.testimonial div.testimonial-wrapper div.testimonial-body p {
+        font-size: 1.9rem;
+        line-height: 2.8rem;
+        margin-top: 2.5rem;
+    }
+}
+/* div.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    align-items: space-around;
+    width: 90%;
+    margin: auto;
+    background: var(--softPink);
+}
+
+div.container div.item {
+    background: white;
+    margin: 1rem auto;
+    width: 50%;
+}
+
+div.container div.one {
+    flex-shrink: 3;
+} */
