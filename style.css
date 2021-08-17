@@ -445,22 +445,3 @@ div.second-row div.testimonial div.testimonial-wrapper div.testimonial-body p {
         margin-top: 2.5rem;
     }
 }
-/* div.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;
-    align-items: space-around;
-    width: 90%;
-    margin: auto;
-    background: var(--softPink);
-}
-
-div.container div.item {
-    background: white;
-    margin: 1rem auto;
-    width: 50%;
-}
-
-div.container div.one {
-    flex-shrink: 3;
-} */
